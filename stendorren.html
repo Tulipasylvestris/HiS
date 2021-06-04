@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Stendörren</title>
+  
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+<style id="jsbin-css">
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+}
+
+body {
+  margin: 0px;
+}
+</style>
+</head>
+<body>
+ <div id="map"></div>
+  
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+<script id="jsbin-javascript">
+var map = L.map('map').setView([58.7477, 17.3886], 15);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var data = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.394284,
+          58.7439292,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Introduktion",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/introduktion/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3949839,
+          58.7442238,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kofärja",
+        "link": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3959642,
+          58.7441157,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Godset, gården, jorden",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/godset/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3965007,
+          58.7447504,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ett vrak under ytan",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/vrak/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3970157,
+          58.7450454,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Det kryper på botten",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/botten/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3982602,
+          58.7451957,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Havet blommar",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/algblomning/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3988181,
+          58.7445166,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Väntan på bättre väder",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/krog/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3977023,
+          58.7460919,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kor i skogen?",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/jordbruk/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3971696,
+          58.7468656,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tittskåpsträd"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.395877,
+          58.7479118,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Högst i näringskedjan",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/havsorn-grasal/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3949758,
+          58.7484406,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Lotsar, fyrar, kasar och GPS",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/navigation/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3936948,
+          58.7484739,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Holkar, nät och vettar",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/sjofaglar/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3920857,
+          58.7485367,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Vintersömn",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/vintersomn/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3914634,
+          58.749149,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Döda träd fulla av liv",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/skogsbruk/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3894893,
+          58.7500062,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Fisk och fiske",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/fisk-fiske/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3884003,
+          58.7501703,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Skogen som skafferi och apotek",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/skog/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3870592,
+          58.7510776,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Stora havet och små kryp",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/naturkrafter/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3868553,
+          58.7506379,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Djurspår",
+        "link": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3854499,
+          58.7507714,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ålkråkor och ål",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/alkrakor-alar/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3844306,
+          58.7503485,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Skrakholk",
+        "link": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3832505,
+          58.7497529,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Vass",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/vass/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3812549,
+          58.7488624,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Fågelspaning",
+        "link": "https://www.sormlandsmuseum.se/utforska/historien-i-sormland/stendorren/introduktion/"
+      }
+    }
+  ]
+};
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.link) {
+      var textContent = '<a href='+feature.properties.link+'>'+feature.properties.name+'</a>' ; 
+      layer.bindPopup(textContent);
+    } else if (feature.properties && feature.properties.name) {
+      layer.bindPopup(feature.properties.name);
+    }
+};
+
+var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#008486",
+    color: "#008486",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+L.geoJSON(data, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    },
+    onEachFeature: onEachFeature
+}).addTo(map);
+
+
+
+
+
+
+</script>
+</body>
+</html>
